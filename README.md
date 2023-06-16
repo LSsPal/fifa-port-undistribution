@@ -1,10 +1,12 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 포트폴리오
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+first, npm install
+
+and,
+
 npm run dev
 # or
 yarn dev
@@ -12,23 +14,18 @@ yarn dev
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+localhost:3000 에서 확인 가능합니다.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+기존 프로젝트의 단점을 보완하여 nextjs 13버전으로 만든 피파온라인4 전적검색 사이트입니다.
 
-## Learn More
+닉네임 입력 칸에 피파온라인4 닉네임을 적어주시면 공식경기 결과를 확인할 수 있고, 박스를 누르면 경기의 세부 내용까지 테이블로 확인하실 수 있습니다.
 
-To learn more about Next.js, take a look at the following resources:
+만약 피파온라인4를 플레이하시지 않으셔서 닉네임이 없으시다면, '잭팟풀'을 입력하시면 확인하실 수 있습니다.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 개발환경
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. next.js
+2. typescript
+3. tailwindcss

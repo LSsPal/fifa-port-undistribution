@@ -15,7 +15,7 @@ const GameRecord: React.FC<props> = ({ userIntell }) => {
   const [isReadMore, setIsReadMore] = useState<boolean>(true);
 
   const DEFAULT_MATCH_TYPE = 50; //공식경기의 ID === 50
-  const INCREASE_NUMBER = 12;
+  const INCREASE_NUMBER = 12; //더보기 버튼을 누를 때마다 12번을 더 출력함
 
   const findUserController = (controllerType: string) => {
     if (controllerType === "keyboard") {
@@ -40,7 +40,7 @@ const GameRecord: React.FC<props> = ({ userIntell }) => {
           Authorization: process.env.NEXT_PUBLIC_FIFAONLINE_API_KEY,
         },
       }
-    );
+    ); //유저의 경기결과를 string으로 구성된 id로 받을 수 있음.
 
     const tasks = [];
     if (defaultLimit <= res.data.length) {
@@ -53,7 +53,7 @@ const GameRecord: React.FC<props> = ({ userIntell }) => {
               Authorization: process.env.NEXT_PUBLIC_FIFAONLINE_API_KEY,
             },
           }
-        );
+        ); //유저의 경기결과 id를 통해 세부 경기결과를 가져온다.
         tasks.push(task);
       }
       await Promise.all(tasks).then((result) => {
@@ -63,7 +63,7 @@ const GameRecord: React.FC<props> = ({ userIntell }) => {
     } else {
       alert(
         "더 이상 데이터를 불러올 수 없습니다.(경기는 최대 100경기까지 불러올 수 있습니다.)"
-      );
+      ); //유저의 경기결과를 넘는만큼 요청하거나, 100경기를 넘으면 오류
     }
   };
 

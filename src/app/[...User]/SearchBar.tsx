@@ -23,14 +23,14 @@ const SearchBar = () => {
 
     setUserLevel(res.data.level);
     setUserAccessId(res.data.accessId);
-  };
+  }; //유저의 닉네임을 통해 레벨, 고유ID를 가져온다.
 
   useEffect(() => {
     if (userName || userLevel || userAccessId) {
       router.push(`/${userAccessId}/${userName}/${userLevel}`);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [userAccessId]);
+  }, [userAccessId]); //유저가 닉네임을 입력해 데이터를 가져오면, 결과페이지로 넘어감
 
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setUserName(event.target.value);
